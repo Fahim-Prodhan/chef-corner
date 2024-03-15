@@ -14,9 +14,9 @@ function RecipeTable({ recipe,index,handleCurrentCooking }) {
         <>
             <tr className="bg-base-200">
                 <th>{index}</th>
-                <td>{name}</td>
-                <td>{preparing_time} minutes</td>
-                <td>{calories} calories</td>
+                <td className='text-[#282828cc]'>{name}</td>
+                <td className='text-[#282828cc]'>{preparing_time} minutes</td>
+                <td className='text-[#282828cc]'>{calories} calories</td>
                 <td><button onClick={()=>handleCurrentCooking(recipe)} className='btn bg-green-500'>Preparing</button></td>
             </tr>
         </>

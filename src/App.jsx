@@ -11,6 +11,10 @@ function App() {
 const [recipes, setRecipes] = useState([])
 const[currentRecipes, setCurrentRecipes] = useState([])
 
+
+const [totalTime, setTotalTime] = useState(0)
+const [totalCalories, setTotalCalories] = useState(0)
+
   const handleWantToCook =(recipe)=>{
     if(recipes.includes(recipe)){
       toast("Recipe is Already Added")
@@ -24,6 +28,13 @@ const[currentRecipes, setCurrentRecipes] = useState([])
     setRecipes(newRecipeList)
 
     setCurrentRecipes([...currentRecipes,recipeId])
+
+    const newTime = totalTime + recipeId.preparing_time
+    setTotalTime(newTime)
+
+    const newTotalCalory = totalCalories + recipeId.calories
+    setTotalCalories(newTotalCalory)
+    
 }
 
 
@@ -41,7 +52,7 @@ const[currentRecipes, setCurrentRecipes] = useState([])
           <ToastContainer/>
         </div>
         <div className='col-span-2'>
-          <RecipeTables recipes={recipes} handleCurrentCooking={handleCurrentCooking} currentRecipes={currentRecipes}></RecipeTables>
+          <RecipeTables recipes={recipes} handleCurrentCooking={handleCurrentCooking} currentRecipes={currentRecipes} totalTime={totalTime} totalCalories={totalCalories}></RecipeTables>
         </div>
       </div>
     </div>

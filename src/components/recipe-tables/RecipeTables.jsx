@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import RecipeTable from '../recipe-table/RecipeTable';
 import CurrentCooking from '../recipe-table/CurrentCooking';
@@ -7,11 +7,13 @@ RecipeTables.propTypes = {
     recipes: PropTypes.array,
     handleCurrentCooking: PropTypes.func,
     currentRecipes: PropTypes.array,
+    totalTime: PropTypes.number,
+    totalCalories: PropTypes.number
 };
 
 
 
-function RecipeTables({ recipes,handleCurrentCooking,currentRecipes }) {
+function RecipeTables({ recipes,handleCurrentCooking,currentRecipes,totalTime,totalCalories }) {
 
     return (
         <div className='card bg-base-100  border border-[#28282833]'>
@@ -20,7 +22,7 @@ function RecipeTables({ recipes,handleCurrentCooking,currentRecipes }) {
                 <hr />
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto mt-6  ">
                 <table className="table">
                     {/* head */}
                     <thead>
@@ -45,7 +47,7 @@ function RecipeTables({ recipes,handleCurrentCooking,currentRecipes }) {
                 <hr />
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto mt-6">
                 <table className="table">
                     {/* head */}
                     <thead>
@@ -63,6 +65,11 @@ function RecipeTables({ recipes,handleCurrentCooking,currentRecipes }) {
                         }
                     </tbody>
                 </table>
+            </div>
+            <div className='grid justify-end grid-cols-2 pl-[230px] my-4'>
+                <h1 className='font-medium text-[#282828]'>Total Time = <br />{totalTime} minutes</h1>
+                <h1 className='font-medium text-[#282828]'>Total Calories = <br />{totalCalories} calories</h1>
+               
             </div>
         </div>
     );

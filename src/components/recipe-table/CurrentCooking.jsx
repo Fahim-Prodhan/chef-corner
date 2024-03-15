@@ -11,9 +11,9 @@ function CurrentCooking({currentRecipe,index}) {
         <>
             <tr className="bg-base-200">
                 <th>{index}</th>
-                <td>{currentRecipe.name}</td>
-                <td>{currentRecipe.preparing_time} minutes</td>
-                <td>{currentRecipe.calories} calories</td>
+                <td className='text-[#282828cc]'>{currentRecipe.name}</td>
+                <td className='text-[#282828cc]'>{currentRecipe.preparing_time} minutes</td>
+                <td className='text-[#282828cc]'>{currentRecipe.calories} calories</td>
 
             </tr>
         </>
