@@ -3,13 +3,15 @@ import './App.css'
 import Header from './components/header/Header'
 import RecipeCards from './components/recipe-cards/RecipeCards'
 import RecipeTables from './components/recipe-tables/RecipeTables'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
 const [recipes, setRecipes] = useState([])
   const handleWantToCook =(recipe)=>{
     if(recipes.includes(recipe)){
-      alert("Ache")
+      toast("Recipe is Already Added")
     }else{
       setRecipes([...recipes,recipe])
     }
@@ -18,6 +20,7 @@ const [recipes, setRecipes] = useState([])
 
   return (
     <div>
+      
       <Header></Header>
       <div>
         <h1 className='pt-24 text-center text-[#150B2B] text-[40px] font-semibold'>Our Recipes</h1>
@@ -26,6 +29,7 @@ const [recipes, setRecipes] = useState([])
       <div className='grid grid-cols-5 gap-6'>
         <div className='col-span-3'>
           <RecipeCards handleWantToCook={handleWantToCook}></RecipeCards>
+          <ToastContainer/>
         </div>
         <div className='col-span-2'>
           <RecipeTables recipes={recipes}></RecipeTables>
