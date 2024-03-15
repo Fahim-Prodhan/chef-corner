@@ -13,7 +13,8 @@ function Header(props) {
         background: `linear-gradient(0deg, rgba(21, 11, 43, 0.90) 0%, 
         rgba(21, 11, 43, 0.00) 100%), url('${headerImage}') lightgray 0px -18.896px / 100% 123.31% 
         no-repeat`,
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        backgroundPosition:"center"
      };
 
     return (
@@ -60,7 +61,7 @@ function Header(props) {
                 <div className='text-center rounded-3xl' style={headerStyle}>
                     <h1 className=' text-white font-bold pt-[129px] px-[212px] text-[52px]'>Discover an exceptional cooking class tailored for you!</h1>
                     <p className='px-[194px] text-white text-[18px] pt-6 pb-10'>Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.</p>
-                    <div className='flex gap-6 justify-center pb-[130px]'>
+                    <div className='flex gap-6 justify-center pb-[120px]'>
                         <button className='bg-green-600 px-7 py-5 rounded-full text-[#150B2B] text-[20px] font-semibold'>Explore Now</button>
                         <button className='border border-s-[#fff] px-7 py-5 rounded-full text-white text-[20px] font-semibold'>Our Feedback</button>
                     </div>
