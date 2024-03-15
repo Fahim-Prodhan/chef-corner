@@ -4,15 +4,16 @@ import './RecipeCard.css'
 import clockImg from '../../assets/images/Frame.svg'
 import fireImg from '../../assets/images/Frame (1).svg'
 RecipeCard.propTypes = {
-    recipe: PropTypes.array.isRequired
+    recipe: PropTypes.array.isRequired,
+    handleWantToCook: PropTypes.func
 
 };
 
-function RecipeCard({ recipe }) {
+function RecipeCard({ recipe,handleWantToCook }) {
     const {name,description,ingredients,preparing_time,calories,recipe_image} = recipe
     return (
             <div className='col-span-1'>
-                <div className="card w-96 bg-base-100 shadow-xl border border-[#28282833]">
+                <div className="card bg-base-100 shadow-xl border border-[#28282833]">
                     <figure className='px-6 pt-6'><img className='rounded-2xl' src={recipe_image} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title font-semibold text-[20px] pb-4">{name}</h2>
@@ -39,7 +40,7 @@ function RecipeCard({ recipe }) {
                         </div>
                         
                         <div className="card-actions justify-start">
-                            <button className="px-6 py-3 bg-green-500 rounded-full">Want to Cook</button>
+                            <button onClick={()=>handleWantToCook(recipe)} className="px-6 py-3 bg-green-500 rounded-full">Want to Cook</button>
                         </div>
                     </div>
                 </div>

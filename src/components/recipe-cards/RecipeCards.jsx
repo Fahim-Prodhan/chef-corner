@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import RecipeCard from '../recipe-card/RecipeCard';
 
 RecipeCards.propTypes = {
-    
+    handleWantToCook: PropTypes.func
 };
 
-function RecipeCards(props) {
+function RecipeCards({handleWantToCook}) {
 
     const [recipes, setRecipes] = useState([])
     
@@ -20,7 +20,7 @@ function RecipeCards(props) {
         <div>
            <div className='grid grid-cols-2 gap-8'>
             {
-                recipes.map(recipe=> <RecipeCard key={recipe.id} recipe={recipe}></RecipeCard>)
+                recipes.map(recipe=> <RecipeCard key={recipe.id} recipe={recipe} handleWantToCook={handleWantToCook}></RecipeCard>)
             }
            </div>
         </div>
