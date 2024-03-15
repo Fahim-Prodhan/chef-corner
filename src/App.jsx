@@ -44,7 +44,7 @@ const [totalCalories, setTotalCalories] = useState(0)
       <Header></Header>
       <div>
         <h1 className='pt-24 text-center text-[#150B2B] text-[40px] font-semibold'>Our Recipes</h1>
-        <p className='pb-12 px-[185px] text-center text-[#150b2b99]'>Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus vulputate netus pharetra rhoncus. Eget urna volutpat curabitur elementum mauris aenean neque. </p>
+        <p className='pb-12 px-[185px] text-center text-[#150b2b99]'>Explore our curated collection of diverse dishes, from appetizers to desserts, and unlock the secrets to creating delicious meals that will impress every palate.</p>
       </div>
       <div className='grid grid-cols-5 gap-6'>
         <div className='col-span-3'>
