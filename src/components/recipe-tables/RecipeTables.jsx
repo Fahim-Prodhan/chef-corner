@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RecipeTable from '../recipe-table/RecipeTable';
+import CurrentCooking from '../recipe-table/CurrentCooking';
 
 RecipeTables.propTypes = {
-    recipes: PropTypes.array
+    recipes: PropTypes.array,
+    handleCurrentCooking: PropTypes.func,
+    currentRecipes: PropTypes.array,
 };
 
-function RecipeTables({ recipes }) {
+
+
+function RecipeTables({ recipes,handleCurrentCooking,currentRecipes }) {
+
     return (
         <div className='card bg-base-100  border border-[#28282833]'>
             <div className='px-20'>
@@ -28,14 +34,14 @@ function RecipeTables({ recipes }) {
                     </thead>
                     <tbody>
                         {
-                            recipes.map((recipe,index) => <RecipeTable key={recipe.id} recipe={recipe} index={index + 1}></RecipeTable>)
+                            recipes.map((recipe,index) => <RecipeTable key={recipe.id} recipe={recipe} index={index + 1} handleCurrentCooking={handleCurrentCooking}></RecipeTable>)
                         }
                     </tbody>
                 </table>
             </div>
 
             <div className='px-20 mt-8'>
-                <h1 className='text-center pb-4 text-[#282828] font-semibold text-[24px]'>Currently cooking: 02</h1>
+                <h1 className='text-center pb-4 text-[#282828] font-semibold text-[24px]'>Currently cooking: {currentRecipes.length}</h1>
                 <hr />
             </div>
 
@@ -50,6 +56,12 @@ function RecipeTables({ recipes }) {
                             <th>Calories</th>
                         </tr>
                     </thead>
+
+                    <tbody>
+                        {
+                            currentRecipes.map((currentRecipe,index) => <CurrentCooking key={currentRecipe.id} currentRecipe={currentRecipe} index={index + 1}></CurrentCooking>)
+                        }
+                    </tbody>
                 </table>
             </div>
         </div>

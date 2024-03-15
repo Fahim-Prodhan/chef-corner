@@ -9,6 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
 const [recipes, setRecipes] = useState([])
+const[currentRecipes, setCurrentRecipes] = useState([])
+
   const handleWantToCook =(recipe)=>{
     if(recipes.includes(recipe)){
       toast("Recipe is Already Added")
@@ -16,6 +18,13 @@ const [recipes, setRecipes] = useState([])
       setRecipes([...recipes,recipe])
     }
   }
+
+  const handleCurrentCooking = recipeId =>{
+    const newRecipeList = recipes.filter(recipe=> recipe.id !== recipeId.id)
+    setRecipes(newRecipeList)
+
+    setCurrentRecipes([...currentRecipes,recipeId])
+}
 
 
   return (
@@ -32,7 +41,7 @@ const [recipes, setRecipes] = useState([])
           <ToastContainer/>
         </div>
         <div className='col-span-2'>
-          <RecipeTables recipes={recipes}></RecipeTables>
+          <RecipeTables recipes={recipes} handleCurrentCooking={handleCurrentCooking} currentRecipes={currentRecipes}></RecipeTables>
         </div>
       </div>
     </div>
