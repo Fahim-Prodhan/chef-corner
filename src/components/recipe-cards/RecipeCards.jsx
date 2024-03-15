@@ -18,10 +18,11 @@ function RecipeCards(props) {
 
     return (
         <div>
-            <h1>Recipe Card</h1>
+           <div className='grid grid-cols-2 gap-8'>
             {
                 recipes.map(recipe=> <RecipeCard key={recipe.id} recipe={recipe}></RecipeCard>)
             }
+           </div>
         </div>
     );
 }

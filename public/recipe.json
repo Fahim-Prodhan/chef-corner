@@ -15,7 +15,7 @@
       "ingredients": ["300 g mixed vegetables", "150 g coconut milk", "100 g chickpeas", "2 tbsp curry paste"],
       "preparing_time": 45,
       "calories": 250,
-      "recipe_image": "vegetable_curry.jpg"
+      "recipe_image": "https://i.ibb.co/f9pcmsP/colorful-vegetable-curry-served-elegant-dish-1-198067-2936.jpg"
     },
     {
       "id": 3,
@@ -24,7 +24,7 @@
       "ingredients": ["400 g spaghetti", "200 g bacon", "3 eggs", "100 g grated Parmesan cheese"],
       "preparing_time": 25,
       "calories": 450,
-      "recipe_image": "https://i.ibb.co/f9pcmsP/colorful-vegetable-curry-served-elegant-dish-1-198067-2936.jpg"
+      "recipe_image": "https://i.ibb.co/6w4HffF/plate-with-spaghetti-carbonara-wooden-table-798986-3674.jpg"
     },
     {
       "id": 4,
