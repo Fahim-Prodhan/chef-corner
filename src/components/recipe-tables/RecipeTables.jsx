@@ -66,7 +66,7 @@ function RecipeTables({ recipes,handleCurrentCooking,currentRecipes,totalTime,to
                     </tbody>
                 </table>
             </div>
-            <div className='grid justify-end grid-cols-2 pl-[230px] my-4'>
+            <div className='grid justify-end grid-cols-2 pl-6 lg:pl-[230px] my-4'>
                 <h1 className='font-medium text-[#282828]'>Total Time = <br />{totalTime} minutes</h1>
                 <h1 className='font-medium text-[#282828]'>Total Calories = <br />{totalCalories} calories</h1>
                

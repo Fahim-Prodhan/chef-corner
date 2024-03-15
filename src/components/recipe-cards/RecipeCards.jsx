@@ -18,7 +18,7 @@ function RecipeCards({handleWantToCook}) {
 
     return (
         <div>
-           <div className='grid grid-cols-2 gap-8'>
+           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {
                 recipes.map(recipe=> <RecipeCard key={recipe.id} recipe={recipe} handleWantToCook={handleWantToCook}></RecipeCard>)
             }
