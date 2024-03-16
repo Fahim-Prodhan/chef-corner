@@ -59,7 +59,7 @@ function Header(props) {
 
             <div className='mt-14'>
                 <div className='text-center rounded-3xl' style={headerStyle}>
-                    <h1 className=' text-white font-bold pt-[24px] lg:pt-[129px] lg:px-[212px] text-[36px] lg:text-[52px]'>Discover an exceptional cooking class tailored for you!</h1>
+                    <h1 className=' text-white font-bold pt-[24px] lg:pt-[129px] px-6 lg:px-[212px] text-[24px] lg:text-[52px]'>Discover an exceptional cooking class tailored for you!</h1>
                     <p className='px-6 lg:px-[194px] text-white text-[18px] pt-6 pb-10'>Embark on a culinary journey with our expert chefs. The secrets of international cuisines, perfect your cooking techniques, and transform ingredients into art.</p>
 
                     <div className='mx-6 flex flex-col lg:flex-row gap-6 justify-center pb-[120px]'>
