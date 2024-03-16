@@ -9,7 +9,7 @@ CurrentCooking.propTypes = {
 function CurrentCooking({currentRecipe,index}) {
     return (
         <>
-            <tr className="bg-base-200">
+            <tr className={(index%2==0)?"bg-white":"bg-base-200"}>
                 <th>{index}</th>
                 <td className='text-[#282828cc]'>{currentRecipe.name}</td>
                 <td className='text-[#282828cc]'>{currentRecipe.preparing_time} minutes</td>
