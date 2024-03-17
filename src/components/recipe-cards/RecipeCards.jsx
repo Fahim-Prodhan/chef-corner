@@ -20,7 +20,7 @@ function RecipeCards({handleWantToCook}) {
         <div>
            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {
-                recipes.map(recipe=> <RecipeCard key={recipe.id} recipe={recipe} handleWantToCook={handleWantToCook}></RecipeCard>)
+                recipes.map((recipe,index)=> <RecipeCard key={index} recipe={recipe} handleWantToCook={handleWantToCook}></RecipeCard>)
             }
            </div>
         </div>

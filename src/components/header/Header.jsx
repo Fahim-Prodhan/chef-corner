@@ -7,7 +7,7 @@ Header.propTypes = {
 
 };
 
-function Header(props) {
+function Header() {
 
     const headerStyle = {
         background: `linear-gradient(0deg, rgba(21, 11, 43, 0.90) 0%, 

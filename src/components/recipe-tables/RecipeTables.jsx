@@ -36,7 +36,7 @@ function RecipeTables({ recipes,handleCurrentCooking,currentRecipes,totalTime,to
                     </thead>
                     <tbody>
                         {
-                            recipes.map((recipe,index) => <RecipeTable key={recipe.id} recipe={recipe} index={index + 1} handleCurrentCooking={handleCurrentCooking}></RecipeTable>)
+                            recipes.map((recipe,index) => <RecipeTable key={index} recipe={recipe} index={index + 1} handleCurrentCooking={handleCurrentCooking}></RecipeTable>)
                         }
                     </tbody>
                 </table>
@@ -61,7 +61,7 @@ function RecipeTables({ recipes,handleCurrentCooking,currentRecipes,totalTime,to
 
                     <tbody>
                         {
-                            currentRecipes.map((currentRecipe,index) => <CurrentCooking key={currentRecipe.id} currentRecipe={currentRecipe} index={index + 1}></CurrentCooking>)
+                            currentRecipes.map((currentRecipe,index) => <CurrentCooking key={index} currentRecipe={currentRecipe} index={index + 1}></CurrentCooking>)
                         }
                     </tbody>
                 </table>

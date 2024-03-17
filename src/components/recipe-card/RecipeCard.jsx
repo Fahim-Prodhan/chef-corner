@@ -4,7 +4,7 @@ import './RecipeCard.css'
 import clockImg from '../../assets/images/Frame.svg'
 import fireImg from '../../assets/images/Frame (1).svg'
 RecipeCard.propTypes = {
-    recipe: PropTypes.array.isRequired,
+    recipe: PropTypes.object,
     handleWantToCook: PropTypes.func
 
 };
@@ -23,7 +23,7 @@ function RecipeCard({ recipe,handleWantToCook }) {
                         
                         <ul className='pl-4 pb-4'  style={{ listStyleType: 'disc' }}>
                             {
-                                ingredients.map((ingredient)=> <li className='text-[#150b2b99] font-fira pb-1 text-[18px]' key={recipe.id}>{ingredient}</li>)
+                                ingredients.map((ingredient,index)=> <li className='text-[#150b2b99] font-fira pb-1 text-[18px]' key={index}>{ingredient}</li>)
                             }
                         </ul>
                         <hr />
